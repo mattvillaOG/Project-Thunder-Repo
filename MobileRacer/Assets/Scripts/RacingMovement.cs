@@ -35,14 +35,12 @@ public class RacingMovement : MonoBehaviour
     Rigidbody rb;
     Coroutine powerupCoroutine;
 
+    [Header("Juice")]
     Animator animator; //animates the car
-
-    //public GameObject lightning;
-    //public GameObject cloud;
-
-    //public AudioSource crack;
-
+    public AudioSource crack;
+    public AudioSource go;
     public GameObject prefab;
+    public GameObject sky;
 
     void Start()
     {
@@ -74,8 +72,6 @@ public class RacingMovement : MonoBehaviour
         //for debugging Thunder Power up Sequence
         if (Input.GetKeyDown(KeyCode.Space))
             {LightningStrikes();}
-
-        //if (GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool)
 
     }
 
@@ -121,10 +117,14 @@ public class RacingMovement : MonoBehaviour
             //gameObject.GetComponent<SpriteRenderer>().color = Color.yellow; // color change!!
             //lightning.GetComponent<Animator>().SetBool("itemPickup", false);
             //cloud.GetComponent<Animator>().SetBool("itemPickup", false);
+            
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white; // back to normal color...
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white; // back to normal color... outdated.
+            //turn off the viduals
+            animator.SetBool("ThunderDrive", false);
+            sky.GetComponent<ForSkyAnim>().speeding = false;
         }
 
         // player moves here! negatives bc it's 2.5d...
@@ -169,22 +169,25 @@ public class RacingMovement : MonoBehaviour
     void LightningStrikes()
     {
         Debug.Log("KaBOOM!");
+        crack.Play();
         //this freezes the game
         Time.timeScale = 0;
         //this spawns the animation above the player
         Instantiate(prefab, new Vector3(transform.position.x, 0.7f, transform.position.z), Quaternion.identity);
+        //this tells the other script that this bool is now true.
+        sky.GetComponent<ForSkyAnim>().speeding = true;
     }
 
     public void StartPowerUp()
     {
         Debug.Log("found player");
-        //GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool = false;
         //destory the cloud
         Destroy(GameObject.FindWithTag("ThunderCloud"));
-        //resume the game
-        Time.timeScale = 1;
+        
         //power up the player
         PowerUp();
+        //resume the game
+        Time.timeScale = 1;
     }
 
     void PowerUp()
@@ -203,6 +206,9 @@ public class RacingMovement : MonoBehaviour
         horizontalAcceleration *= speedBoost;
 
         isPoweredUp = true;
+        
+        //play the exlopode sound effect
+        go.Play();
         powerupCoroutine = StartCoroutine(EndPowerup(powerupDuration));
     }
 
@@ -229,7 +235,6 @@ public class RacingMovement : MonoBehaviour
         if (currentHorizontalSpeed > horizontalMaxSpeed) { currentHorizontalSpeed = horizontalMaxSpeed; }
         if (currentHorizontalSpeed < -horizontalMaxSpeed) { currentHorizontalSpeed = -horizontalMaxSpeed; }
 
-        //turn off the viduals
-        animator.SetBool("ThunderDrive", false);
+
     }
 }

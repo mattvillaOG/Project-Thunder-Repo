@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour
 {
+    public GameObject mainMenu;
     public GameObject instructions;
     public GameObject credits;
-
 
     private void Start()
     {
@@ -26,21 +26,25 @@ public class LoadGame : MonoBehaviour
     public void OpenInstructions()
     {
         instructions.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     public void CloseInstructions()
     {
         instructions.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
     //used to navgate creadits
     public void OpenCredits()
     {
         credits.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     public void CloseCredits()
     {
         credits.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }

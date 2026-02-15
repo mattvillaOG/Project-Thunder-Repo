@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 450819545}
   - component: {fileID: 450819544}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HellYeah!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450819544
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 1371079544}
   - component: {fileID: 1371079547}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -622}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 153.6197, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371079544
 MonoBehaviour:
@@ -737,8 +737,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8f89cdd2877f5430781cb276607d5ce9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -767,6 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78cabded0ef7044caa2791b6033ec31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
   instructions: {fileID: 0}
   credits: {fileID: 0}
 --- !u!1 &1386482203
@@ -781,7 +782,7 @@ GameObject:
   - component: {fileID: 1386482206}
   - component: {fileID: 1386482205}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TryAgain?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +918,7 @@ GameObject:
   - component: {fileID: 1596678529}
   - component: {fileID: 1596678528}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GameOver_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wow, you''re really bad at this game.
+  m_text: 'Wow, you''re really bad at this game!
 
 
     Current high score:
