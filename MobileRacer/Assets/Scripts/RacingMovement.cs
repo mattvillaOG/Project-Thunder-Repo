@@ -178,7 +178,7 @@ public class RacingMovement : MonoBehaviour
     public void StartPowerUp()
     {
         Debug.Log("found player");
-        GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool = false;
+        //GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool = false;
         //destory the cloud
         Destroy(GameObject.FindWithTag("ThunderCloud"));
         //resume the game

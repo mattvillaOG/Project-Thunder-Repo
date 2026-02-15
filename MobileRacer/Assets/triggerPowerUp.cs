@@ -12,7 +12,8 @@ public class triggerPowerUp : MonoBehaviour
         if(mybool == true)
         {
             Debug.Log("triggered bool");
-            GameObject.FindWithTag("Player").GetComponent<RacingMovement>().StartPowerUp();
+            mybool = false;
+            GameObject.FindWithTag("Player").GetComponent<RacingMovement>().StartPowerUp();   
         }
     }
 
