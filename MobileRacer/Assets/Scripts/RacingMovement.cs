@@ -36,10 +36,13 @@ public class RacingMovement : MonoBehaviour
     Coroutine powerupCoroutine;
 
     Animator animator; //animates the car
-    public GameObject lightning;
-    public GameObject cloud;
 
-    public AudioSource crack;
+    //public GameObject lightning;
+    //public GameObject cloud;
+
+    //public AudioSource crack;
+
+    public GameObject prefab;
 
     void Start()
     {
@@ -47,12 +50,6 @@ public class RacingMovement : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>();
         currentSpeed = baseSpeed;
         animator = this.GetComponent<Animator>();
-
-        //for lighting cloud
-        lightning = GameObject.Find("lightning_1");
-        cloud = GameObject.Find("Cloud_9");
-        lightning.GetComponent<SpriteRenderer>().enabled = false;
-        cloud.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     void Update()
@@ -62,7 +59,7 @@ public class RacingMovement : MonoBehaviour
             movingLeft = true;
             animator.SetBool("IsTurning", true);
             //sr.flipX = false;
-            Debug.Log("Check");
+            //Debug.Log("Check");
         }
         else { movingLeft = false; animator.SetBool("IsTurning", false); }
 
@@ -73,6 +70,13 @@ public class RacingMovement : MonoBehaviour
             //sr.flipX = true;
         }
         else { movingRight = false; animator.SetBool("IsTurning", false); }
+
+        //for debugging Thunder Power up Sequence
+        if (Input.GetKeyDown(KeyCode.Space))
+            {LightningStrikes();}
+
+        //if (GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool)
+
     }
 
     private void FixedUpdate()
@@ -115,8 +119,8 @@ public class RacingMovement : MonoBehaviour
         if (isPoweredUp)
         {
             //gameObject.GetComponent<SpriteRenderer>().color = Color.yellow; // color change!!
-            lightning.GetComponent<Animator>().SetBool("itemPickup", false);
-            cloud.GetComponent<Animator>().SetBool("itemPickup", false);
+            //lightning.GetComponent<Animator>().SetBool("itemPickup", false);
+            //cloud.GetComponent<Animator>().SetBool("itemPickup", false);
         }
         else
         {
@@ -152,25 +156,39 @@ public class RacingMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Lightning")
         {
-            // Enable cloud and lighting sprites/animations (maybe)
-            lightning.GetComponent<Animator>().SetBool("itemPickup", true);
-            cloud.GetComponent<Animator>().SetBool("itemPickup", true);
-
-            crack.Play();
-
-            // powerups!
-            PowerUp();
+            //gets rid of the lightning bolt pick up item
             Destroy(collision.gameObject);
 
-            //Aniamtion Transition 
             animator.SetBool("ThunderDrive", true);
+
+            //PowerUp();
+            LightningStrikes();
         }
     }
 
-    void PowerUp()
+    void LightningStrikes()
     {
-        //lightning.GetComponent<SpriteRenderer>().enabled = true;
+        Debug.Log("KaBOOM!");
+        //this freezes the game
+        Time.timeScale = 0;
+        //this spawns the animation above the player
+        Instantiate(prefab, new Vector3(transform.position.x, 0.7f, transform.position.z), Quaternion.identity);
+    }
 
+    public void StartPowerUp()
+    {
+        Debug.Log("found player");
+        GameObject.FindWithTag("ThunderCloud").GetComponent<triggerPowerUp>().mybool = false;
+        //destory the cloud
+        Destroy(GameObject.FindWithTag("ThunderCloud"));
+        //resume the game
+        Time.timeScale = 1;
+        //power up the player
+        PowerUp();
+    }
+
+    void PowerUp()
+    { 
         if (isPoweredUp)
         {
             // reset the timer!
@@ -187,6 +205,8 @@ public class RacingMovement : MonoBehaviour
         isPoweredUp = true;
         powerupCoroutine = StartCoroutine(EndPowerup(powerupDuration));
     }
+
+    //matts function to call upong lighting effect
 
     IEnumerator EndPowerup(float time)
     {
