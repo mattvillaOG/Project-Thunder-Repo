@@ -492,11 +492,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1ef5acfcb3314490ae9351537973fb4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 917500708b9b64d1eacdfab7a9456900, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.657
+  m_Volume: 0.565
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 1416947518}
   - component: {fileID: 1416947517}
   m_Layer: 0
-  m_Name: GoSounds (1)
+  m_Name: Thunder Soundd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +789,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 199
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 1519831412}
   - component: {fileID: 1519831411}
   m_Layer: 0
-  m_Name: GoSounds
+  m_Name: Zoom Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +917,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 244
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1348,6 +1348,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc9115db37fea945a34c26b7997c759, type: 3}
+--- !u!1 &2132634404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132634406}
+  - component: {fileID: 2132634405}
+  m_Layer: 0
+  m_Name: Quip Machine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2132634405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132634404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3086006e4d14dee8decd66f8e763c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4130625435865809484}
+--- !u!4 &2132634406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132634404}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 585, y: 1173.4834, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &51591726845800841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1722,13 +1767,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c0e298b1e10e847ca9cccf95ee6c6253, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.536
-  m_Pitch: 0.81
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 210
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1846,3 +1891,4 @@ SceneRoots:
   - {fileID: 1727749161}
   - {fileID: 1687102247}
   - {fileID: 46980361}
+  - {fileID: 2132634406}

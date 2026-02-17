@@ -183,7 +183,6 @@ public class RacingMovement : MonoBehaviour
         Debug.Log("found player");
         //destory the cloud
         Destroy(GameObject.FindWithTag("ThunderCloud"));
-        
         //power up the player
         PowerUp();
         //resume the game
