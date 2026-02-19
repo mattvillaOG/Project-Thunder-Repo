@@ -150,6 +150,7 @@ public class RacingMovement : MonoBehaviour
                 {
                     GameManager.instance.currentHighScore = currentScore;
                 }
+                GameManager.instance.currentScore = currentScore;
                 SceneManager.LoadScene("GameOver");
             }
         }

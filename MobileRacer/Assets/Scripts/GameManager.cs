@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public int currentHighScore = 0;
 
+    public int currentScore;
+
     public static GameManager instance; // instance of game manager is publically accessible
 
     void Start()
