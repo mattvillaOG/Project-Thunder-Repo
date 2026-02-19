@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 3325848127795542213}
   - component: {fileID: 3563611028306228174}
   - component: {fileID: 7903989176371848876}
+  - component: {fileID: 9149782579664266842}
   m_Layer: 0
   m_Name: Racer
   m_TagString: Player
@@ -1870,12 +1871,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4130625435865809484}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a4679d2f94945aaa20c85a384eb07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RM: {fileID: 51591726845800841}
+--- !u!111 &9149782579664266842
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130625435865809484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4563bec004f1648dabba4bf7c99a5c31, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
