@@ -592,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: 584}
+  m_AnchoredPosition: {x: 0, y: 584}
   m_SizeDelta: {x: 856, y: 844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490819934
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3607bb15c9754a95a539961749e1e70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36871d401111b4ec38e3ad7a30aa5b1a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1529,32 +1529,35 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b><u>Producer</u></b>
+  m_text: '<b><u>DIRECTOR</u></b>
 
     Matthew Villa
 
 
-    <b><u>Programmer</u></b>
+    <b><u>PROGRAMMER</u></b>
 
     Max
     Cohen
 
 
-    <b><u>Artists</u></b>
+    <b><u>ARTISTS</u></b>
 
     Marianne Meloche
 
     Valarie Anderson
 
+    Fahmi
+    Sans
 
-    <b><u>Sounds
-    Desing</u></b>
+
+    <b><u>SOUND</u></b>
 
     Max Ravnovski
 
     Joshua Empyre
 
     Viho!
+    Music
 
 
 '
@@ -1584,13 +1587,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.55
-  m_fontSizeBase: 53.55
+  m_fontSize: 51.23
+  m_fontSizeBase: 51.23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2703,7 +2706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: 111}
+  m_AnchoredPosition: {x: -17, y: 232}
   m_SizeDelta: {x: 838.6274, y: 820.2522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006120631
@@ -2729,15 +2732,15 @@ MonoBehaviour:
   m_text: '
 
 
-    1.Tilt the Phone on the Verticle Axis to Steer your Truck.
+    1.Tilt Phone on the VERTICLE AXIS to Steer your Truck.
 
 
     2.
-    Menuver Around Cones to Avoid Crashing.
+    Dodge CONES to Avoid Crashing.
 
 
-    3. Collect Lighting Bolts to shift
-    it into Tunder Drive!
+    3. Collect LIGHTING to shift into Thunder
+    Drive, becomming IMMUNE to cones!
 
 
 '
@@ -2773,13 +2776,13 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
